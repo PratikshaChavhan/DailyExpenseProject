@@ -1,0 +1,22 @@
+{% extends 'sidebar.html' %}
+{% block my %}
+
+<h1>Login Page</h1>
+<form method="POST">
+    {%csrf_token%}
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="uname"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="passw"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login"></td>
+            <td><a href="addUser">click here for Register</a></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}
